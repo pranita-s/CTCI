@@ -9,8 +9,7 @@ def isUnique(s):
     temp = ord(char)-ord('a')
     if status & (1<<temp):
       return False
-    status |= (1<<temp)
-   
+    status |= (1<<temp)  
    return True
     
   
