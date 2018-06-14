@@ -10,6 +10,6 @@ def isUnique(s):
     if status & (1<<temp):
       return False
     status |= (1<<temp)  
-   return True
+  return True
     
   
