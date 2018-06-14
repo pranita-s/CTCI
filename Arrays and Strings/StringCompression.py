@@ -9,7 +9,7 @@ def stringCompress(s):
   while i < len(s):
     curr = s[i]
     count = 0
-    while curr == s[i]:
+    while i < len(s) and curr == s[i]:
       i + = 1
       count + = 1
     result += (curr + str(count))
