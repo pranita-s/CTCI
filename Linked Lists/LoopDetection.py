@@ -12,6 +12,6 @@ def loopDetection(head):
 			slow = head
 			
 			while slow is not fast:
-				slow, fast = slow.next, fast.next.next
+				slow, fast = slow.next, fast.next
 			return slow
 	return None
