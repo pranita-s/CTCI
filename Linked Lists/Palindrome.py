@@ -2,6 +2,17 @@
 # TIME - 
 # SPACE -
 
+def reverse(l):
+	dummy = ListNode(0)
+	dummy.next = l
+	dummy = sublist_head
+	subiter = sublist_head.next
+	while subiter:
+		temp = subiter.next
+		sublist_head.next, subiter.next, temp.next  = temp, temp.next, sublist_head.next
+	return dummy.next
+		
+
 def Palindrome(head):
 	size = findSize(head)
 	slow = fast = head
