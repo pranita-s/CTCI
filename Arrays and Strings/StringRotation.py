@@ -20,7 +20,7 @@ class KMP:
 			
 
 	def KMPsearch(self,text,substring):
-		lookupArray = self.createLookupArray(substring)
+		lookupArray = self.createlookupArray(substring)
 		j = 0
 		while i < len(text) and j < len(substring):
 			if text[i] == substring[j]:
@@ -30,7 +30,7 @@ class KMP:
 				if j == 0:
 					i += 1
 				else:
-					j = lookup[i-1]
+					j = lookupArray[i-1]
 			if j == len(substring):
 				return True
 		return False
