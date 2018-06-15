@@ -12,7 +12,7 @@ class KMP:
 				lookup[i] = j + 1
 				j += 1
 				i += 1
-			elif i == 0:
+			elif j == 0:
 				i += 1
 			else:
 				j = lookup[j-1]
