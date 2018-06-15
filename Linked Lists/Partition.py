@@ -4,6 +4,7 @@
 
 def partition(head):
 	less , greater = ListNode(0), ListNode(0)
+	less_head, greater_head = less, greater
 	
 	while head:
 		if head.data < 3:
@@ -13,5 +14,5 @@ def partition(head):
 			greater = head
 			greater, head = greater.next, head.next
 	
-	less.next = greater.next
-	return less.next
+	less.next = greater_head.next
+	return less_head.next
