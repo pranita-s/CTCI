@@ -14,3 +14,23 @@ def sumLists(l1,l2):
 		carry = total / 10
 		result = result.next
 	return res_head
+
+
+# FOLLOW UP
+def sumLists(l1,l2):
+	s1 , s2 = [], []
+	res_head = result = ListNode(0)
+	while l1:
+		s1.append(l1.data)
+		l1 = l1.next
+	
+	while l2:
+		s2.append(l2.data)
+		l2 = l2.next
+	carry = 0
+	while s1 or s2 or carry:
+		total = carry + (s1.pop() if s1) + (s2.pop() if s2)
+		result.next = ListNode(total % 10)
+		result = result.next
+		carry = total // 10
+	return res_head
