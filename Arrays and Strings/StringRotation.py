@@ -30,7 +30,7 @@ class KMP:
 				if j == 0:
 					i += 1
 				else:
-					j = lookupArray[i-1]
+					j = lookupArray[j-1]
 			if j == len(substring):
 				return True
 		return False
