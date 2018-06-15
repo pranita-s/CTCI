@@ -2,12 +2,12 @@
 # TIME - O(n)
 # SPACE - O(1)
 
-def partition(head):
+def partition(head,k):
 	less , greater = ListNode(0), ListNode(0)
 	less_head, greater_head = less, greater
 	
 	while head:
-		if head.data < 3:
+		if head.data < k:
 			less.next = head
 			less, head = less.next, head.next
 		else:
