@@ -18,7 +18,6 @@ class Tree:
 		tree.right = self.minimalTree(arr[mid+1:end],mid+1 , end)
 		return tree
 		
-
 if __name__ == '__main__':
 	t = Tree()
 	arr = [1,2,3,4,5,6,7,8,9,10]
