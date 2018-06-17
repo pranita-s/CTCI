@@ -1,7 +1,3 @@
-
-# TIME -
-# SPACE - 
-
 import collections
 class Graph:
 	
@@ -10,7 +6,9 @@ class Graph:
     		self.edges = collections.defaultdict(list)
         	self.answer = False
 		self.vertices = []
-
+# TIME - O(V)
+# SPACE - O(d) (maximal depth of tree)
+		
 	def routeNodesDFS(self,node1, node2):
     		if node1 == node2:
         		self.answer = True
@@ -19,7 +17,9 @@ class Graph:
             		if not self.visited[neighbor]:
                 		self.dfs(neighbor,node2)
 		return self.answer
-	
+
+# TIME - O(V)
+# SPACE - O(V)
 	def routeNodesBFS(self,node1,node2):
 		q = collections.deque([node1])
 		while q:
