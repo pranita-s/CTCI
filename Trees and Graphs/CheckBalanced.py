@@ -1,6 +1,6 @@
 
 # TIME - O(n)
-# SPACE - O(1)
+# SPACE - O(H)
 
 def checkBalanced(root):
 	if not root:
