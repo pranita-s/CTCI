@@ -1,5 +1,5 @@
 
-# TIME - O(n)
+# TIME - O(H)
 # SPACE - O(H)
 
 def successor(node):
