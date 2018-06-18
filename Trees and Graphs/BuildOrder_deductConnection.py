@@ -1,5 +1,5 @@
-# TIME
-# SPACE
+# TIME - O(V+E)
+# SPACE - O(E)
 
 import collections
 class Graph:
@@ -33,7 +33,21 @@ class Graph:
 		for e in dep:
 			self.edges[e[0]].append(e[1])
 			self.vertices[e[1]] += 1
-		
+
+    def initiate(self,proj,dep):
+        for p in proj:
+            self.projects[p] = 0
+        for e in dep:
+            self.edges[e[0]].append(e[1])
+            self.projects[e[1]] += 1
+        print(self.buildOrder())
+
+if __name__=='__main__':
+    G=Graph()
+    projects = ["a", "b", "c", "d", "e", "f","g"]
+    dependencies = [("f", "c"), ("f", "b"), ("f", "a"), ("c", "a"), ("b", "a"),("b","e"),("a","e"),("d","g")]
+    G.initiate(projects,dependencies)
+
    
    
   
