@@ -14,13 +14,14 @@ def firstCommonAncester(root,node1,node2):
 		
 		left = helper(root.left,node1,node2)
 		if left.count== 2:
-			return status(root,2)
+			return left
 		
 		right = helper(root.right,node1,node2)
 		if right.count == 2:
-			return status(root,2)
+			return right
 			
 			
 		totalCount = left.count + right.count + int(root is node1) + int(root is node2)
 		return status(root if totalCount == 2 else None, totalCount)
 		
+	return helper(root,node1,node2).ancester
