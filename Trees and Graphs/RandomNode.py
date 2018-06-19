@@ -1,3 +1,6 @@
+# TIME - O(D) D - max depth of tree
+# SPACE - O(D)
+
 import random
 class BinaryTreeNode:
 
