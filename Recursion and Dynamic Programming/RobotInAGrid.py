@@ -39,10 +39,6 @@ def helper(curr_r,curr_c,offlimits,path):
 		return False
 
 	point = (curr_r,curr_c)
-	
-	if point in offlimits:
-		return False
-	
 	if point == (0,0) or helper(curr_r-1,curr_c,offlimits,path) or helper(curr_r,curr_c-1,offlimits,path):
 		path.append(point)
 		return True
