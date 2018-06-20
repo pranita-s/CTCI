@@ -14,7 +14,8 @@ def RobotInAGrid(curr_r, curr_c, offlimits, path):
 		return False
 
 		
-	if (curr_r == 0 and curr_c == 0) or RobotInAGrid(curr_r-1,curr_c,offlimits, path) or RobotInAGrid(curr_r,curr_c-1,offlimits,path):
+	if (curr_r == 0 and curr_c == 0) or RobotInAGrid(curr_r-1,curr_c,offlimits, path) or 
+	/ RobotInAGrid(curr_r,curr_c-1,offlimits,path):
 		path.append((curr_r,curr_c))
 		return True
 	
