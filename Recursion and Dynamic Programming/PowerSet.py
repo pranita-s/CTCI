@@ -17,7 +17,7 @@ def PowerSet(soFar,remaining):
 
 # COMBINATORICS
 
-def subsets(arr):
+def PowerSet(arr):
 	result = []
 	for i in range(1<<len(arr)):
 		subset = [arr[bit_position] for bit_position in range(len(arr)) if is_bit_set(i,bit_position)]
@@ -28,6 +28,6 @@ def is_bit_set(num,bit_position):
 	return num & (1<<bit_position)
 	
 arr = [1,2,3]
-print(subsets(arr))
+print(PowerSet(arr))
 
 
