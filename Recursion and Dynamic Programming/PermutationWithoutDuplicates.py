@@ -17,8 +17,7 @@ permute('abc')
 
 #########################################################################################
 
-def permute(s):
-  
+def permute(s):  
   def permuteHelper(i):   
       if i == len(s)-1:
         result.append(s)      
