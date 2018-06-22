@@ -1,8 +1,7 @@
 # TIME - O(n!)
 
 def nQueens(n):
-  def queenPlacement(row):
-    
+  def queenPlacement(row):    
     if row ==n:
       result.append(col_placement)
       return    
