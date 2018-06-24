@@ -1,7 +1,5 @@
  # TIME - O(n)
  
- 
- 
  def search(nums, target):
         left = 0
         right = len(nums) - 1
