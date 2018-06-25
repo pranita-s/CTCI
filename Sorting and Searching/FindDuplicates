@@ -1,0 +1,15 @@
+# TIME - O(n)
+
+def setBit(status,ele):
+    return (1 << ele | status)
+
+def getBit(status,ele):
+    return (1 << ele & status)
+
+def checkDuplicates(arr):
+    status  = 0    
+    for ele in arr:
+        if getBit(status,ele):
+            print(ele)
+        else:
+            setBit(status,ele)
