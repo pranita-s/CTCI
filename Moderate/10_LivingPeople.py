@@ -32,6 +32,31 @@ def most_living_people(people):
 
     return maxYear
 
+# TIME - O(Range + P)
+
+def most_living_people(people):
+    if len(people) == 0:
+        return None
+    arr = [0] * 102
+    for p in people:
+        addIndex = p.b - 1900
+        arr[addIndex] += 1
+        if p.d:
+            subtractIndex = p.d - 1900 + 1
+            arr[subtractIndex] -= 1
+
+
+    maxYear = 0
+    maxPeople = 0
+    temp = 0
+    for i in range(len(arr)):
+        temp += arr[i]
+        if temp > maxPeople:
+            maxPeople = temp
+            maxYear = i
+
+    return maxYear+1900
+ 
 class P:
     def __init__(self,birth,death = None):
         self.b = birth
