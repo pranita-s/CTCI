@@ -3,10 +3,10 @@
 def nQueens(n):
   def queenPlacement(row):    
     if row ==n:
-      result.append(col_placement)
+      result.append(list(col_placement))
       return    
     for col in range(n):      
-      if all(abs(col-c) not in (0,row-i) for i,c in enumerate(col_placment[:row])):
+      if all(abs(col-c) not in (0,row-i) for i,c in enumerate(col_placement[:row])):
         col_placement[row] = col
         queenPlacement(row+1)
         
