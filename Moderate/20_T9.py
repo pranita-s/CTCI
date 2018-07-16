@@ -18,13 +18,11 @@ class Trie:
         d = {'0': '', '1': '', '2': 'abc', '3': 'def', '4': 'ghi', '5': 'jkl', '6': 'mno', '7': 'pqrs', '8': 'tuv',
              '9': 'wxyz'}
         result = []
-
+        
         def helper(num,i,soFar,node):
             if i == len(num) and node[Trie.END] == True:
                 result.append(soFar)
-
             else:
-
                 if d[num[i]]:
                     for char in d[num[i]]:
                         if char in node[Trie.DICT]:
